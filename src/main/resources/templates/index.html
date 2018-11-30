@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
 </head>
 <body>
 <!-- BLABLABLA TEST -->
 <h1 th:text="'Bonjour ' + ${nom}">Hello <b>CDA</b></h1>
 <ul>
     <li th:each="film : ${films}"><a th:text="${film.getTitre()}" th:href="@{'/film/' + ${film.getId()}}">Le grand film</a></li>
+
+    <form method="post" action="detail">
+        <input type="text" placeholder="Film à rechercher" name="filmNameSearch"/>
+    </form>
     <!--/*-->
     <li>Film 2</li>
     <li>Film 3</li>
