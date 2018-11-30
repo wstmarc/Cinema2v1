@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<!-- BLABLABLA TEST -->
 <h1 th:text="'Bonjour ' + ${nom}">Hello <b>CDA</b></h1>
 <ul>
     <li th:each="film : ${films}"><a th:text="${film.getTitre()}" th:href="@{'/film/' + ${film.getId()}}">Le grand film</a></li>
