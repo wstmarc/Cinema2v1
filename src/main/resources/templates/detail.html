@@ -8,11 +8,11 @@
 <body>
 <h1 th:text="${film.getTitre()}">Titre du film</h1>
 <h2>Note : <span th:text="${film.getNotation()}">0</span></h2>
-<!--<h2>Nom : <span th:text="${film.afficheNom}">fichier affiche</span></h2>-->
-<!--DONE A la place du nom de l'image, on voudrait afficher l'image-->
-<!--<img src="file://C:/Users/CDI/Desktop/affiches/ben-hur.jpg" />&lt;!&ndash;th:src="@{'C:\Users\CDI\Desktop\affiches\\' + ${film.afficheNom}}"&ndash;&gt;-->
-<!-- ATTENTION: il faut s'assurer que les ressources statiques (images, et autres documents) soient placées dans le dossier 'static' -->
 <img th:src="'/affiche/'+${film.getAffiche()}">
 <!-- 50em correspond à 100% de la longueur d'origine -->
+
+<ul th:each="role : ${film.getRoles()}">
+    <a th:href="'/acteur/'+${role.getActeur().getPhotoPath()}" th:text="${role.getActeur().getPrenom()+' '+role.getActeur().getNom()}">acteur</a>
+</ul>
 </body>
 </html>

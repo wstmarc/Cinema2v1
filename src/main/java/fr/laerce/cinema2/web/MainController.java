@@ -34,17 +34,17 @@ public class MainController {
     public String detail(Model model, @PathVariable("id") String id){
         Integer idFilm = Integer.parseInt(id);
         model.addAttribute("film", films.getById(idFilm));
+        //model.addAttribute("listeacteurs", personnes.getPersonnes());
         return "detail";
     }
 
-//TODO Essayer d'externaliser le controlleur
-/*    @GetMapping("affiche/{id}")
-    public String affiche(Model model, @PathVariable("id") String id){
-        Integer idFilm = Integer.parseInt(id);
-        String nomimagefilm = filmsDAO.getById(idFilm).getAfficheNom();
-        model.addAttribute("nomfilm", nomimagefilm);
-        return "affiche";
-    }*/
+    @GetMapping("/acteur/{id}")
+    public String acteur(Model model, @PathVariable("id") String id){
+        model.addAttribute("acteur", personnes.getByAf(id));
+        System.out.println("L'ACTEUR EN QUESTION: "+personnes.getByAf(id));
+        return "acteur";
+    }
+
     //on créer une methode affiche qui est mapper /affiche/id avec id, le nom de l'affiche du film
     @GetMapping("/affiche/{id}")
     public void affiche (HttpServletRequest request, HttpServletResponse response, @PathVariable("id") String id) throws IOException {

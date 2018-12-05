@@ -44,6 +44,7 @@ public class DataModel {
 
     private List<Personne> personnes = new ArrayList<>();
     private List<Film2> films = new ArrayList<>();
+    private List<Role> roles = new ArrayList<>();
 
     public DataModel() {
 
@@ -103,17 +104,16 @@ public class DataModel {
                         "qui arpente chaque nuit les trottoirs d'Hollywood Boulevard. La jeune femme ne fera qu'une " +
                         "bouchee du brillant PDG.",
                 personnes.get(20)));
-        films.add(new Film2(4, "BEN-HUR",
-                4.0,
-                "f0006.jpg",
-                "Judas Ben-Hur, " +
-                        "prince de Judée, retrouve son ami d'enfance Messala, venu prendre la tête de la garnison de " +
-                        "Jérusalem. Mais leur amitié ne peut résister à leurs caractères différents. Alors qu'une " +
-                        "pierre tombe du balcon de la maison familiale de Ben-Hur, manquant de tuer le gouverneur " +
-                        "qui paradait plus bas, Messala trahit son ami qu'il sait innocent en l'envoyant aux galères " +
-                        "et en jetant en prison sa mère et sa sœur. Ben-Hur jure alors de reconquérir sa liberté " +
-                        "et prépare sa vengeance.",
-                personnes.get(21)));
+        films.add(new Film2(4, "Légendes d'automne",
+                3.9,
+                "f0004.jpg",
+                "Au cœur des contrées sauvages du Montana, trois frères, Alfred, Tristan et Samuel sont " +
+                        "élevés par leur père, le colonel William Ludlow et ses amis indiens. Un jour, Samuel, " +
+                        "le plus fragile, présente sa ravissante fiancée, Susannah à sa famille. Les trois jeunes " +
+                        "hommes s’engagent dans la première Guerre Mondiale et Samuel décède sur le champ de " +
+                        "bataille. A leur retour, Tristan et Alfred se battent pour conquérir le cœur de " +
+                        "la belle veuve.",
+                personnes.get(23)));
         films.add(new Film2(5, "E.T. l'extra-terrestre",
                 4.2,
                 "f0005.jpg",
@@ -127,77 +127,146 @@ public class DataModel {
                         "ne tardent pas à devenir amis. Aidé par sa soeur Gertie et son frère aîné Michael, Elliot " +
                         "va alors tenter de garder la présence d'E.T. secrète.",
                 personnes.get(22)));
-        films.add(new Film2(6, "Légendes d'automne",
-                3.9,
-                "f0004.jpg",
-                "Au cœur des contrées sauvages du Montana, trois frères, Alfred, Tristan et Samuel sont " +
-                        "élevés par leur père, le colonel William Ludlow et ses amis indiens. Un jour, Samuel, " +
-                        "le plus fragile, présente sa ravissante fiancée, Susannah à sa famille. Les trois jeunes " +
-                        "hommes s’engagent dans la première Guerre Mondiale et Samuel décède sur le champ de " +
-                        "bataille. A leur retour, Tristan et Alfred se battent pour conquérir le cœur de " +
-                        "la belle veuve.",
-                personnes.get(23)));
+        films.add(new Film2(6, "BEN-HUR",
+                4.0,
+                "f0006.jpg",
+                "Judas Ben-Hur, " +
+                        "prince de Judée, retrouve son ami d'enfance Messala, venu prendre la tête de la garnison de " +
+                        "Jérusalem. Mais leur amitié ne peut résister à leurs caractères différents. Alors qu'une " +
+                        "pierre tombe du balcon de la maison familiale de Ben-Hur, manquant de tuer le gouverneur " +
+                        "qui paradait plus bas, Messala trahit son ami qu'il sait innocent en l'envoyant aux galères " +
+                        "et en jetant en prison sa mère et sa sœur. Ben-Hur jure alors de reconquérir sa liberté " +
+                        "et prépare sa vengeance.",
+                personnes.get(21)));
 
 
         Role r;
 
+        //FILM 1: Le juge et l'assassin
+        //System.out.println("film 1: "+films.get(0).toString().toUpperCase());
+        //ROLE: +acteur="Noiret" +alias="Le juge Rousseau"
         r = new Role(films.get(0), personnes.get(0), "Le juge Rousseau", 1);
         films.get(0).addRole(r);
         personnes.get(0).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //ROLE: +acteur="Galabru" +alias="Joseph Bouvier"
         r = new Role(films.get(0), personnes.get(1), "Joseph Bouvier", 2);
         films.get(0).addRole(r);
         personnes.get(1).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //ROLE: +acteur="Huppert" +alias="Rose"
         r = new Role(films.get(0), personnes.get(2), "Rose", 3);
         films.get(0).addRole(r);
         personnes.get(2).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //FILM 2: La guerre des étoiles
+        //System.out.println("film 2: "+films.get(1).toString().toUpperCase());
+        //ROLE: +acteur="Hamil" +alias="Luke Skywalker"
         r = new Role(films.get(1), personnes.get(3), "Luke Skywalker", 1);
         films.get(1).addRole(r);
         personnes.get(3).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //ROLE: +acteur="Ford" +alias="Han Solo"
         r = new Role(films.get(1), personnes.get(4), "Han Solo", 2);
         films.get(1).addRole(r);
         personnes.get(4).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //ROLE: +acteur="Fisher" +alias="Princesse Leia Organa"
         r = new Role(films.get(1), personnes.get(5), "Princesse Leia Organa", 3);
         films.get(1).addRole(r);
         personnes.get(5).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //FILM 3: Pretty Woman
+        //System.out.println("film 3: "+films.get(2).toString().toUpperCase());
+        //ROLE: +acteur="Gere" +alias="Edward Lewis"
         r = new Role(films.get(2), personnes.get(6), "Edward Lewis", 1);
         films.get(2).addRole(r);
         personnes.get(6).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //ROLE: +acteur="Roberts" +alias="Vivian Ward"
         r = new Role(films.get(2), personnes.get(7), "Vivian Ward", 2);
         films.get(2).addRole(r);
         personnes.get(7).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //ROLE: +acteur="Bellamy" +alias="James"
         r = new Role(films.get(2), personnes.get(8), "James", 3);
         films.get(2).addRole(r);
         personnes.get(8).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //FILM 4: Légendes d'automne
+        //System.out.println("film 4: "+films.get(3).toString().toUpperCase());
+        //ROLE: +acteur="Hopkins" +alias="Colonel William Ludlow"
         r = new Role(films.get(3), personnes.get(9), "Colonel William Ludlow", 1);
         films.get(3).addRole(r);
         personnes.get(9).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //ROLE: +acteur="Pitt" +alias="Tristan Ludlow"
         r = new Role(films.get(3), personnes.get(10), "Tristan Ludlow", 2);
         films.get(3).addRole(r);
         personnes.get(10).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //ROLE: +acteur="Quinn" +alias="Alfred Ludlow"
         r = new Role(films.get(3), personnes.get(11), "Alfred Ludlow", 3);
         films.get(3).addRole(r);
         personnes.get(11).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //ROLE: +acteur="Thomas" +alias="Samuel Ludlow"
         r = new Role(films.get(3), personnes.get(12), "Samuel Ludlow", 4);
         films.get(3).addRole(r);
         personnes.get(12).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //FILM 5: E.T.
+        //System.out.println("film 5: "+films.get(4).toString().toUpperCase());
+        //ROLE: +acteur="Thomas" +alias="Eliott"
         r = new Role(films.get(4), personnes.get(12), "Eliott", 1);
         films.get(4).addRole(r);
         personnes.get(12).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //ROLE: +acteur="Barrymore" +alias="Gertie"
         r = new Role(films.get(4), personnes.get(13), "Gertie", 2);
         films.get(4).addRole(r);
         personnes.get(13).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //ROLE: +acteur="Wallace Stone" +alias="Mary"
         r = new Role(films.get(4), personnes.get(14), "Mary", 3);
         films.get(4).addRole(r);
         personnes.get(14).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //FILM 6: Ben Hur
+        //System.out.println("film 6: "+films.get(5).toString().toUpperCase());
+        //ROLE: +acteur="Heston" +alias="Judas Ben-Hur"
         r = new Role(films.get(5), personnes.get(15), "Judas Ben-Hur", 1);
-        films.get(4).addRole(r);
+        films.get(5).addRole(r);
         personnes.get(15).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //ROLE: +acteur="Boyd" +alias="Messala"
         r = new Role(films.get(5), personnes.get(16), "Messala", 2);
-        films.get(4).addRole(r);
+        films.get(5).addRole(r);
         personnes.get(16).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
+
+        //ROLE: +acteur="Hawkins" +alias="Quintus Arius"
         r = new Role(films.get(5), personnes.get(17), "Quintus Arius", 3);
-        films.get(4).addRole(r);
+        films.get(5).addRole(r);
         personnes.get(17).addRole(r);
+        //System.out.println("ROLE: "+r.toString());
 
 
     }
@@ -219,5 +288,16 @@ public class DataModel {
             }
         }
         return film;
+    }
+
+    public Personne getByAf(String affiche){
+        Personne acteur = null;
+        for (Personne a: personnes) {
+            if(a.getPhotoPath().equals(affiche)){
+                acteur = a;
+                break;
+            }
+        }
+        return acteur;
     }
 }

@@ -62,6 +62,16 @@ public class Role {
     }
 
     @Override
+    public String toString() {
+        return "Role{" +
+                "film=" + film +
+                ", acteur=" + acteur +
+                ", alias='" + alias + '\'' +
+                ", odre=" + odre +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(getFilm(), getActeur(), getAlias(), getOdre());
     }
