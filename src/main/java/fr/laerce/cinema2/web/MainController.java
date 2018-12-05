@@ -1,5 +1,6 @@
 package fr.laerce.cinema2.web;
 
+import fr.laerce.cinema2.dao.DataModel;
 import fr.laerce.cinema2.dao.FilmsDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,19 +19,21 @@ import java.io.OutputStream;
 public class MainController {
 
     @Autowired
-    FilmsDAO filmsDAO;
+    DataModel films;
+    @Autowired
+    DataModel personnes;
 
     @GetMapping("/")
     public String main(Model model){
         model.addAttribute("nom","Karl");
-        model.addAttribute("films",filmsDAO.films());
+        model.addAttribute("films",films.getFilms());
         return "index";
     }
 
     @GetMapping("/film/{id}")
     public String detail(Model model, @PathVariable("id") String id){
         Integer idFilm = Integer.parseInt(id);
-        model.addAttribute("film", filmsDAO.getById(idFilm));
+        model.addAttribute("film", films.getById(idFilm));
         return "detail";
     }
 
@@ -45,12 +48,12 @@ public class MainController {
     //on créer une methode affiche qui est mapper /affiche/id avec id, le nom de l'affiche du film
     @GetMapping("/affiche/{id}")
     public void affiche (HttpServletRequest request, HttpServletResponse response, @PathVariable("id") String id) throws IOException {
-        
+
 //merci patrick
         /////////////////////////////////////////////////////
         //on copie colle le code du prof et on adapte
         // Chemin absolu de l'image
-        String url="C:\\Users\\CDI\\Desktop\\affiches\\";
+        String url="C:\\Users\\CDI\\Desktop\\affichesS\\";
         //chemin relatif
         String filename =url+id;
         // Type mime associé à l'image d'après le nom de fichier

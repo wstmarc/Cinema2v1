@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <!-- BLABLABLA TEST -->
 <h1 th:text="'Bonjour ' + ${nom}">Hello <b>CDA</b></h1>
 <ul>
-    <li th:each="film : ${films}"><a th:text="${film.getTitre()}" th:href="@{'/film/' + ${film.getId()}}">Le grand film</a></li>
+    <li th:each="film : ${films}">
+        <a th:text="${film.getTitre()}" th:href="@{'/film/' + ${film.getId()}}">Le grand film</a>
+    </li>
+</ul>
+<!--TODO Intégrer la recherche -->
+<form method="post" th:action="'/affiche/'">
+    <input type="text" placeholder="Film à rechercher" name="filmNameSearch"/>
+    <input type="submit" value="Chercher"/>
+</form>
 
-    <form method="post" action="detail">
-        <input type="text" placeholder="Film à rechercher" name="filmNameSearch"/>
-    </form>
-    <!--/*-->
+<!--/*Cette partie sera ignorée par le serveur-->
+<ul>
     <li>Film 2</li>
     <li>Film 3</li>
     <li>Film 4</li>
@@ -22,7 +28,8 @@
     <li>Film 6</li>
     <li>Film 7</li>
     <li>Film 8</li>
-    <!--*/-->
 </ul>
+<!--*/-->
+
 </body>
 </html>
