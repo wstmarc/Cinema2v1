@@ -22,9 +22,10 @@
 </div>-->
 
 <!-- BLABLABLA TEST -->
-<h1 th:text="'Bonjour ' + ${nom}">Hello <b>CDA</b></h1>
-<p><span>Voici une liste des films :</span>
+<h1 class="accueil" th:text="'Bonjour ' + ${nom}">Hello <b>CDA</b></h1><br>
+<h2 class="accueil">Voici une liste des films :</h2>
 
+<p>
 <!-- Liste des films affichés dans une liste -->
 <!--<ul>
     <li th:each="film : ${films}">
@@ -39,13 +40,67 @@
             <td class="centretext"><a th:text="${film.getTitre()}" th:href="@{'/film/' + ${film.getId()}}">Le grand film</a></td>
         </tr>
         <tr>
-            <td><img class="centre" th:src="'/affiche/'+${film.getAffiche()}"></td>
+            <td><a th:href="@{'/film/' + ${film.getId()}}"><img class="centre" th:src="'/affiche/'+${film.getAffiche()}"></a></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
         </tr>
     </tbody>
 </table>
+
+<!-- # EXEMPLE DE TEST # -->
+<!--<table>
+    <caption>Passagers du vol 377</caption>
+
+    <thead> &lt;!&ndash; En-tête du tableau &ndash;&gt;
+    <tr>
+        <th>Nom</th>
+        <th>Âge</th>
+        <th>Pays</th>
+    </tr>
+    </thead>
+
+    <tfoot> &lt;!&ndash; Pied de tableau &ndash;&gt;
+    <tr>
+        <th>Nom</th>
+        <th>Âge</th>
+        <th>Pays</th>
+    </tr>
+    </tfoot>
+
+    <tbody> &lt;!&ndash; Corps du tableau &ndash;&gt;
+    <tr>
+        <td>Carmen</td>
+        <td>33 ans</td>
+        <td>Espagne</td>
+    </tr>
+    <tr>
+        <td>Michelle</td>
+        <td>26 ans</td>
+        <td>États-Unis</td>
+    </tr>
+    <tr>
+        <td>François</td>
+        <td>43 ans</td>
+        <td>France</td>
+    </tr>
+    <tr>
+        <td>Martine</td>
+        <td>34 ans</td>
+        <td>France</td>
+    </tr>
+    <tr>
+        <td>Jonathan</td>
+        <td>13 ans</td>
+        <td>Australie</td>
+    </tr>
+    <tr>
+        <td>Xu</td>
+        <td>19 ans</td>
+        <td>Chine</td>
+    </tr>
+    </tbody>
+</table>-->
 
 <!-- TODO Intégrer la recherche 1 -->
 <!--
