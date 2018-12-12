@@ -1,0 +1,39 @@
+/*OK*/
+body{
+    /*background-color: red;*/
+}
+
+#header{
+
+}
+
+div#footer{
+    text-align: center;
+    /*background-color: lime;*/
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+img{
+    height: 20em;
+    width: auto;
+    background-color: green;
+    display: block;
+}
+
+img.centre{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.centretext{
+    text-align: center;
+}
+
+table{
+    width: 100%;
+}

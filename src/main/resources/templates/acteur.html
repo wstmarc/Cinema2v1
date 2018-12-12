@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Detail de l'acteur</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <div th:replace="fragments/header :: entetecss" />
 </head>
 <body>
-    <h1 th:text="${acteur.getNom()}"></h1>
-    <img th:src="'/acteur/'+${acteur.getPhotoPath()}">
+<div th:replace="fragments/header :: header"/>
+<h1 th:text="${acteur.getNom()}"></h1>
+<img th:src="'/afficheacteur/'+${acteur.getPhotoPath()}">
+<div th:replace="fragments/footer :: footer"/>
+<div th:replace="fragments/footer :: scriptsjs"/>
 </body>
 </html>

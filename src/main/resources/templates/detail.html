@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title th:text="${film.getTitre()}">Detail du film</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <div th:replace="fragments/header :: entetecss" />
 </head>
 <body>
-<h1 th:text="${film.getTitre()}">Titre du film</h1>
+<div th:replace="fragments/header :: header"/>
+<h1 class="centretext" th:text="${film.getTitre()}">Titre du film</h1>
 <h2>Note : <span th:text="${film.getNotation()}">0</span></h2>
-<img th:src="'/affiche/'+${film.getAffiche()}">
+<img class="centre" th:src="'/affiche/'+${film.getAffiche()}">
+
 <!-- 50em correspond à 100% de la longueur d'origine -->
 
 <ul th:each="role : ${film.getRoles()}">
     <a th:href="'/acteur/'+${role.getActeur().getPhotoPath()}" th:text="${role.getActeur().getPrenom()+' '+role.getActeur().getNom()}">acteur</a>
 </ul>
+<!--  b4-$  -->
+<div th:replace="fragments/footer :: footer"/>
+<div th:replace="fragments/footer :: scriptsjs"/>
 </body>
 </html>
