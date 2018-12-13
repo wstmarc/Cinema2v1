@@ -30,11 +30,17 @@ public class MainController {
         return "index";
     }
 
+    @GetMapping("/listefilms")
+    public String listefilms(Model model){
+        model.addAttribute("films",films.getFilms());
+        return "listefilms";
+    }
+
     @GetMapping("/film/{id}")
     public String detail(Model model, @PathVariable("id") String id){
         Integer idFilm = Integer.parseInt(id);
         model.addAttribute("film", films.getById(idFilm));
-        //model.addAttribute("listeacteurs", personnes.getPersonnes());
+        //model.addAttribute("listeacteurs", personnesZ.getPersonnes());
         return "detail";
     }
 
@@ -54,7 +60,7 @@ public class MainController {
         /////////////////////////////////////////////////////
         //on copie colle le code du prof et on adapte
         // Chemin absolu de l'image
-        String url="C:\\Users\\CDI\\Desktop\\affichesS\\";
+        String url="C:\\Users\\CDI\\Desktop\\images\\affichesS\\";
         //chemin relatif
         String filename =url+id;
         // Type mime associé à l'image d'après le nom de fichier
@@ -95,7 +101,7 @@ public class MainController {
         /////////////////////////////////////////////////////
         //on copie colle le code du prof et on adapte
         // Chemin absolu de l'image
-        String url="C:\\Users\\CDI\\Desktop\\personnesS\\";
+        String url="C:\\Users\\CDI\\Desktop\\images\\personnesS\\";
         //chemin relatif
         String filename =url+id;
         // Type mime associé à l'image d'après le nom de fichier

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Liste des films</title>
+    <div th:replace="fragments/header :: entetecss"/>
+</head>
+<body>
+<div th:replace="fragments/header :: header"/>
+<h2 class="centretext">Voici une liste des films :</h2>
+
+<!--/*-->
+<!-- ## Liste des films affichés dans une liste ## -->
+<!--<ul>
+    <li th:each="film : ${films}">
+        <a th:text="${film.getTitre()}" th:href="@{'/film/' + ${film.getId()}}">Le grand film</a>
+        <img th:src="'/affiche/'+${film.getAffiche()}">
+    </li>
+</ul>-->
+<!--*/-->
+
+<!-- ## Liste des films affichés dans un tableau ## -->
+<table>
+    <tbody th:each="film : ${films}">
+    <tr>
+        <td class="centretext"><a th:text="${film.getTitre()}" th:href="@{'/film/' + ${film.getId()}}">Le grand film</a>
+        </td>
+    </tr>
+    <tr>
+        <td><a th:href="@{'/film/' + ${film.getId()}}"><img class="centre" th:src="'/affiche/'+${film.getAffiche()}"></a></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    </tbody>
+</table>
+
+<!--/*-->
+<!-- TODO Intégrer la recherche 1 -->
+<!--
+<form method="post" th:action="'/affiche/'">
+    <input type="text" placeholder="Film à rechercher" name="filmNameSearch"/>
+    <input type="submit" value="Chercher"/>
+</form>-->
+<!--*/-->
+
+<!--/* COMMENTAIRE THYMELEAF */-->
+<!--/*Cette partie sera ignorée par le serveur-->
+<ul>
+    <li>Film 2</li>
+    <li>Film 3</li>
+    <li>Film 4</li>
+    <li>Film 5</li>
+    <li>Film 6</li>
+    <li>Film 7</li>
+    <li>Film 8</li>
+</ul>
+<!--*/-->
+
+<div th:replace="fragments/footer :: footer"/>
+<div th:replace="fragments/footer :: scriptsjs"/>
+</body>
+</html>

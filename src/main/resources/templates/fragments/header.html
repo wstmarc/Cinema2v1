@@ -13,11 +13,22 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous"/>
     </div>-->
     <th:block th:fragment="entetecss">
-        <!-- Bootstrap CSS -->
+        <!-- # SCRIPTS # -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- # BOOTSTRAP CSS # -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- # BOOTSTRAP CSS (CDN) # -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
               integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="/static/css/cinema.css" th:href="@{/css/cinema.css}"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous"/>
+        <!-- ## ICONE NAVIGATEUR ## -->
+        <!--<link rel="icon" sizes="16x16" href="static/favicon.ico" />-->
+        <!-- # POUR MOZILLA FIREFOX # --><!-- # POUR GOOGLE # -->
+        <link rel="shortcut icon" type="image/x-icon" href="..\favicon.ico" sizes="16x16"/>
     </th:block>
 </head>
 
@@ -38,7 +49,7 @@
 <div id="header" th:fragment="header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <!--<a class="navbar-brand" href="#">Navbar</a>-->
-        <a class="navbar-brand" href="/">Navbar</a>
+        <a class="navbar-brand" href="/"><i class="fas fa-film"></i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
                 aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -47,7 +58,10 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/listefilms">Liste des films<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Liste des acteurs et réalisateurs</a>
                 </li>
                 <!--<li class="nav-item">
                     <a class="nav-link" href="#">Features</a>

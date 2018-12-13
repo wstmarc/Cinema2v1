@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title th:text="${film.getTitre()}">Detail du film</title>
-
+    <!--th:text="${film.getTitre()}"-->
+    <title>Detail du film</title>
     <div th:replace="fragments/header :: entetecss" />
 </head>
 <body>
 <div th:replace="fragments/header :: header"/>
 <h1 class="centretext" th:text="${film.getTitre()}">Titre du film</h1>
-<h2>Note : <span th:text="${film.getNotation()}">0</span></h2>
+<h2 class="centretext">Note : <span th:text="${film.getNotation()}">0</span></h2>
 <img class="centre" th:src="'/affiche/'+${film.getAffiche()}">
 
 <!-- 50em correspond à 100% de la longueur d'origine -->
-
-<ul th:each="role : ${film.getRoles()}">
+<h2 class="centretext">Liste des acteurs :</h2>
+<ul  class="centretext" th:each="role : ${film.getRoles()}">
     <a th:href="'/acteur/'+${role.getActeur().getPhotoPath()}" th:text="${role.getActeur().getPrenom()+' '+role.getActeur().getNom()}">acteur</a>
 </ul>
 <!--  b4-$  -->

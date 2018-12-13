@@ -1,0 +1,7 @@
+#FAVICON#
+L'icone du site (le fichier favicon.ico),
+doit être placée dans la racine du dossier,
+static de l'application, par défaut.
+
+
+

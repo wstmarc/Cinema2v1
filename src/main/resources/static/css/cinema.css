@@ -7,6 +7,18 @@ body{
 
 }
 
+.fondaccueil{
+    /*background-color: red;*/
+    /*background-color: green;*/
+    /*background-color: blue;*/
+    /*background-color: papayawhip;*/
+    background-color: lightyellow;
+}
+
+.fas{
+    font-size: 50px;
+}
+
 div#footer{
     text-align: center;
     /*background-color: lime;*/
@@ -18,8 +30,8 @@ ul{
 }
 
 img{
-    height: 20em;
-    width: auto;
+    width: 30em;
+    height: auto;
     background-color: green;
     display: block;
 }
@@ -30,11 +42,18 @@ img.centre{
     display: block;
 }
 
-.centretext, .accueil{
+.centretext{
     text-align: center;
 }
 
 table{
     width: 100%;
+}
+
+.w-100 {
+    width: 30em!important;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 

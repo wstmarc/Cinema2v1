@@ -79,7 +79,7 @@ public class DataModel {
                 "Fin du XIXème, " +
                 "Joseph Bouvier est révoqué de l'armée à cause de ses excès de violence. Suite à ce renvoi, l'homme " +
                 "s'attaque à sa fiancée et tente de se suicider, en vain. Après un séjour en hôpital psychiatrique, " +
-                "Joseph ressort de cet endroit encore plus enragé et décide de se venger sur toutes les personnes qui " +
+                "Joseph ressort de cet endroit encore plus enragé et décide de se venger sur toutes les personnesZ qui " +
                 "croiseront son chemin en Ardèche. Non loin de là, le juge Rousseau, passionné par l'affaire, prend " +
                 "part à l'investigation et se met sur les traces de Bouvier. Bien décidé à le mettre sous les verrous, " +
                 "c'est le début d'une chasse à l'homme...",
