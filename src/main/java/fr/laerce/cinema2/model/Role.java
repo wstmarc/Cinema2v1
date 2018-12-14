@@ -4,11 +4,11 @@ import java.util.Objects;
 
 public class Role {
     private Film2 film;
-    private Personne acteur;
+    private Personne0 acteur;
     private String alias;
     private Integer odre;
 
-    public Role(Film2 film, Personne acteur, String alias, Integer odre) {
+    public Role(Film2 film, Personne0 acteur, String alias, Integer odre) {
         this.film = film;
         this.acteur = acteur;
         this.alias = alias;
@@ -26,11 +26,11 @@ public class Role {
         this.film = film;
     }
 
-    public Personne getActeur() {
+    public Personne0 getActeur() {
         return acteur;
     }
 
-    public void setActeur(Personne acteur) {
+    public void setActeur(Personne0 acteur) {
         this.acteur = acteur;
     }
 

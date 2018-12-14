@@ -1,7 +1,8 @@
+/*
 package fr.laerce.cinema2.web;
 
 import fr.laerce.cinema2.dao.DataModel;
-import fr.laerce.cinema2.dao.PersonsDao;
+import fr.laerce.cinema2.dao.FilmsDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,15 +15,14 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.math.BigInteger;
 
 @Controller
-public class MainController {
+public class MainController0 {
 
     @Autowired
     DataModel films;
     @Autowired
-    PersonsDao personnes;
+    DataModel personnes;
 
     @GetMapping("/")
     public String main(Model model){
@@ -46,12 +46,9 @@ public class MainController {
     }
 
     @GetMapping("/acteur/{id}")
-//    public String acteur(Model model, @PathVariable("id") String id){
-    public String acteur(Model model, @PathVariable("id") BigInteger id){
-//        model.addAttribute("acteur", personnes.getByAf(id));
-//        System.out.println("L'ACTEUR EN QUESTION: "+personnes.getByAf(id)); //### DEBUG
-          model.addAttribute("acteur", personnes.getById(id));
-
+    public String acteur(Model model, @PathVariable("id") String id){
+        model.addAttribute("acteur", personnes.getByAf(id));
+        System.out.println("L'ACTEUR EN QUESTION: "+personnes.getByAf(id)); //### DEBUG
         //DOUBLE TODO
         return "acteur";
     }
@@ -138,3 +135,4 @@ public class MainController {
         in.close();
     }
 }
+*/

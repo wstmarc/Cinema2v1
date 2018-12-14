@@ -10,10 +10,10 @@ public class Film2 {
     private Double notation;
     private String resume;
     private String affiche;
-    private Personne realisateur;
+    private Personne0 realisateur;
     private List<Role> roles=new ArrayList<>();
 
-    public Film2(int id, String titre, Double notation, String affiche, String resume, Personne realisateur) {
+    public Film2(int id, String titre, Double notation, String affiche, String resume, Personne0 realisateur) {
         this.id = id;
         this.titre = titre;
         this.notation = notation;
@@ -57,11 +57,11 @@ public class Film2 {
         this.resume = resume;
     }
 
-    public Personne getRealisateur() {
+    public Personne0 getRealisateur() {
         return realisateur;
     }
 
-    public void setRealisateur(Personne realisateur) {
+    public void setRealisateur(Personne0 realisateur) {
         this.realisateur = realisateur;
     }
 

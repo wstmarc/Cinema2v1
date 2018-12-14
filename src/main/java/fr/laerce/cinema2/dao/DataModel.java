@@ -32,7 +32,7 @@ package fr.laerce.cinema2.dao;
  */
 
 import fr.laerce.cinema2.model.Film2;
-import fr.laerce.cinema2.model.Personne;
+import fr.laerce.cinema2.model.Personne0;
 import fr.laerce.cinema2.model.Role;
 import org.springframework.stereotype.Component;
 
@@ -42,36 +42,36 @@ import java.util.List;
 @Component
 public class DataModel {
 
-    private List<Personne> personnes = new ArrayList<>();
+    private List<Personne0> personnes = new ArrayList<>();
     private List<Film2> films = new ArrayList<>();
     private List<Role> roles = new ArrayList<>();
 
     public DataModel() {
 
-        personnes.add(new Personne("Noiret", "Phillipe", 1930, "p0001.jpg"));
-        personnes.add(new Personne("Galabru", "Michel", 1922, "p0002.jpg"));
-        personnes.add(new Personne("Huppert", "Isabelle", 1953, "p0003.jpg"));
-        personnes.add(new Personne("Hamill", "Mark", 1951, "p0004.jpg"));
-        personnes.add(new Personne("Ford", "Harrison", 1942, "p0005.jpg"));
-        personnes.add(new Personne("Fisher", "Carrie", 1956, "p0006.jpg"));
-        personnes.add(new Personne("Gere", "Richard", 1949, "p0007.jpg"));
-        personnes.add(new Personne("Roberts", "Julia", 1967, "p0008.jpg"));
-        personnes.add(new Personne("Bellamy", "Ralph", 1904, "p0009.jpg"));
-        personnes.add(new Personne("Hopkins", "Anthony", 1937, "p0010.jpg"));
-        personnes.add(new Personne("Pitt", "William Bradley", 1963, "p0011.jpg"));
-        personnes.add(new Personne("Quinn", "Aidan", 1959, "p0012.jpg"));
-        personnes.add(new Personne("Thomas", "Henry", 1971, "p0013.jpg"));
-        personnes.add(new Personne("Barrymore", "Drew Bythe", 1975, "p0014.jpg"));
-        personnes.add(new Personne("Wallace Stone", "Dee", 1948, "p0015.jpg"));
-        personnes.add(new Personne("Heston", "Charlton", 1923, "p0016.jpg"));
-        personnes.add(new Personne("Boyd", "Stephen", 1928, "p0017.jpg"));
-        personnes.add(new Personne("Hawkins", "Jack", 1910, "p0018.jpg"));
-        personnes.add(new Personne("Tavernier", "Bertrand", 1941, "p0110.jpg"));
-        personnes.add(new Personne("Lucas", "Georges", 1944, "p0045.jpg"));
-        personnes.add(new Personne("Marshall", "Garry", 1934, "p0098.jpg"));
-        personnes.add(new Personne("Wyler", "William", 1902, "p0044.jpg"));
-        personnes.add(new Personne("Spielberg", "Steven", 1946, "p0019.jpg"));
-        personnes.add(new Personne("Zwick", "Edward", 1952, "p0020.jpg"));
+        personnes.add(new Personne0("Noiret", "Phillipe", 1930, "p0001.jpg"));
+        personnes.add(new Personne0("Galabru", "Michel", 1922, "p0002.jpg"));
+        personnes.add(new Personne0("Huppert", "Isabelle", 1953, "p0003.jpg"));
+        personnes.add(new Personne0("Hamill", "Mark", 1951, "p0004.jpg"));
+        personnes.add(new Personne0("Ford", "Harrison", 1942, "p0005.jpg"));
+        personnes.add(new Personne0("Fisher", "Carrie", 1956, "p0006.jpg"));
+        personnes.add(new Personne0("Gere", "Richard", 1949, "p0007.jpg"));
+        personnes.add(new Personne0("Roberts", "Julia", 1967, "p0008.jpg"));
+        personnes.add(new Personne0("Bellamy", "Ralph", 1904, "p0009.jpg"));
+        personnes.add(new Personne0("Hopkins", "Anthony", 1937, "p0010.jpg"));
+        personnes.add(new Personne0("Pitt", "William Bradley", 1963, "p0011.jpg"));
+        personnes.add(new Personne0("Quinn", "Aidan", 1959, "p0012.jpg"));
+        personnes.add(new Personne0("Thomas", "Henry", 1971, "p0013.jpg"));
+        personnes.add(new Personne0("Barrymore", "Drew Bythe", 1975, "p0014.jpg"));
+        personnes.add(new Personne0("Wallace Stone", "Dee", 1948, "p0015.jpg"));
+        personnes.add(new Personne0("Heston", "Charlton", 1923, "p0016.jpg"));
+        personnes.add(new Personne0("Boyd", "Stephen", 1928, "p0017.jpg"));
+        personnes.add(new Personne0("Hawkins", "Jack", 1910, "p0018.jpg"));
+        personnes.add(new Personne0("Tavernier", "Bertrand", 1941, "p0110.jpg"));
+        personnes.add(new Personne0("Lucas", "Georges", 1944, "p0045.jpg"));
+        personnes.add(new Personne0("Marshall", "Garry", 1934, "p0098.jpg"));
+        personnes.add(new Personne0("Wyler", "William", 1902, "p0044.jpg"));
+        personnes.add(new Personne0("Spielberg", "Steven", 1946, "p0019.jpg"));
+        personnes.add(new Personne0("Zwick", "Edward", 1952, "p0020.jpg"));
 
         films.add(new Film2(1,"Le juge et l'assassin",
                 3.8,
@@ -271,7 +271,7 @@ public class DataModel {
 
     }
 
-    public List<Personne> getPersonnes() {
+    public List<Personne0> getPersonnes() {
         return personnes;
     }
 
@@ -290,9 +290,9 @@ public class DataModel {
         return film;
     }
 
-    public Personne getByAf(String affiche){
-        Personne acteur = null;
-        for (Personne a: personnes) {
+    public Personne0 getByAf(String affiche){
+        Personne0 acteur = null;
+        for (Personne0 a: personnes) {
             if(a.getPhotoPath().equals(affiche)){
                 acteur = a;
                 break;
